@@ -253,11 +253,19 @@ function NeedlText() {
     }
 
     try {
+      // Find the parent question from the context
+      const contextList = context.split('. ');
+      const parentQuestion = contextList.find(item => {
+        const [q, a] = item.split(': ');
+        return a && a.trim().toLowerCase() === 'yes';
+      });
+
       const res = await axios.post('http://localhost:5000/autocomplete', {
         query: value,
         question: currentQuestion,
         context,
         conditional_question: true,
+        parent_question: parentQuestion ? parentQuestion.split(': ')[0] : '',
       });
       setConditionalSuggestions(res.data.options || []);
     } catch (err) {

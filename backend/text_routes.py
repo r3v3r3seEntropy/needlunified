@@ -250,35 +250,201 @@ def parse_context(context):
 ##############################
 # AI-based Autocomplete
 ##############################
-def ai_autocomplete(query, question=None, context_str='', is_conditional=False):
+def get_gi_complaints():
+    """Return a comprehensive list of GI-related complaints"""
+    return [
+        "abdominal pain", "acid reflux", "bloating",
+        "blood in stool", "constipation", "cramping",
+        "diarrhea", "difficulty swallowing", "excessive gas",
+        "heartburn", "indigestion", "loss of appetite",
+        "nausea", "stomach pain", "vomiting",
+        "abdominal distension", "belching", "black stool",
+        "burning in stomach", "change in bowel habits",
+        "dyspepsia", "early satiety", "epigastric pain",
+        "fatty stool", "flatulence", "food intolerance",
+        "gastric pain", "gastrointestinal bleeding",
+        "jaundice", "loose stools", "lower abdominal pain",
+        "melena", "upper abdominal pain", "weight loss"
+    ]
+
+def get_question_specific_suggestions(question_lower):
+    """Return context-specific suggestions based on question type"""
+    suggestions = {
+        "duration": {
+            "keywords": ["how long", "duration", "when did", "started", "begin"],
+            "options": [
+                "2 days ago", "3 days ago", "4 days ago", "5 days ago",
+                "1 week ago", "2 weeks ago", "3 weeks ago",
+                "1 month ago", "2 months ago", "3 months ago",
+                "6 months ago", "1 year ago", "since yesterday",
+                "this morning", "last night", "few hours ago"
+            ]
+        },
+        "frequency": {
+            "keywords": ["how often", "frequency", "how many times"],
+            "options": [
+                "once a day", "twice a day", "three times a day",
+                "every few hours", "every hour", "constantly",
+                "intermittently", "occasionally", "rarely",
+                "after meals", "before meals", "during meals",
+                "at night", "in the morning", "all day",
+                "several times a day", "few times a week"
+            ]
+        },
+        "severity": {
+            "keywords": ["how severe", "pain scale", "intensity", "how bad"],
+            "options": [
+                "mild", "moderate", "severe", "very severe",
+                "1/10", "2/10", "3/10", "4/10", "5/10",
+                "6/10", "7/10", "8/10", "9/10", "10/10",
+                "bearable", "unbearable", "manageable",
+                "increasing", "decreasing", "fluctuating"
+            ]
+        },
+        "location": {
+            "keywords": ["where", "location", "which part", "area"],
+            "options": [
+                "upper abdomen", "lower abdomen", "right upper quadrant",
+                "left upper quadrant", "right lower quadrant",
+                "left lower quadrant", "around navel", "epigastric region",
+                "entire abdomen", "stomach area", "under ribs",
+                "left side", "right side", "both sides",
+                "periumbilical", "flank region"
+            ]
+        },
+        "character": {
+            "keywords": ["what type", "describe", "character", "kind of", "nature"],
+            "options": [
+                "sharp", "dull", "burning", "cramping", "stabbing",
+                "throbbing", "gnawing", "pressure-like", "squeezing",
+                "continuous", "intermittent", "colicky", "spasmodic",
+                "aching", "piercing", "radiating"
+            ]
+        },
+        "aggravating": {
+            "keywords": ["what makes it worse", "aggravate", "trigger", "increase"],
+            "options": [
+                "eating", "drinking", "spicy food", "fatty food",
+                "lying down", "bending", "exercise", "stress",
+                "certain foods", "alcohol", "coffee", "empty stomach",
+                "pressure", "movement", "deep breathing", "coughing"
+            ]
+        },
+        "relieving": {
+            "keywords": ["what makes it better", "relieve", "improve", "help"],
+            "options": [
+                "rest", "lying down", "sitting up", "medication",
+                "antacids", "eating", "drinking water", "avoiding food",
+                "heat application", "cold application", "massage",
+                "pressure", "burping", "passing gas", "bowel movement"
+            ]
+        },
+        "associated": {
+            "keywords": ["associated symptoms", "along with", "accompanied", "other symptoms"],
+            "options": [
+                "nausea", "vomiting", "diarrhea", "constipation",
+                "fever", "chills", "loss of appetite", "weight loss",
+                "fatigue", "bloating", "gas", "heartburn",
+                "belching", "early satiety", "acid reflux"
+            ]
+        }
+    }
+    
+    # Find matching category based on keywords
+    for category, data in suggestions.items():
+        if any(kw in question_lower for kw in data["keywords"]):
+            return data["options"]
+    
+    return None
+
+def ai_autocomplete(query, question=None, context_str='', is_conditional=False, parent_question=None):
     if not query.strip():
         return []
 
     try:
-        if question:
-            # Autocomplete for a partial answer to a specific question
-            sys_prompt = "You are helping a patient complete an answer."
-            user_prompt = f"Question: {question}\nContext: {context_str}\nPartial answer: {query}\nSuggest possible completions (one per line)."
-            if is_conditional:
-                user_prompt += "\nThis is a conditional question. Provide relevant detail."
+        query_lower = query.lower()
 
-        else:
-            # Chief complaint
-            sys_prompt = "You are providing suggestions for chief complaints."
-            user_prompt = f"Partial chief complaint: {query}\nSuggest possible completions (one per line)."
+        # For chief complaints (GI specific)
+        if not question:
+            gi_complaints = get_gi_complaints()
+            suggestions = [c for c in gi_complaints if c.lower().startswith(query_lower)]
+            return suggestions[:5]
 
+        # For conditional questions, use parent question for context
+        if is_conditional and parent_question:
+            # Extract relevant part from parent question for better context
+            parent_lower = parent_question.lower()
+            
+            # Get specific suggestions based on parent question
+            if "pain" in parent_lower:
+                conditionals = [
+                    f"Yes - {sev} pain" for sev in ["mild", "moderate", "severe", "intermittent", "constant"]
+                ]
+            elif any(word in parent_lower for word in ["frequency", "often"]):
+                conditionals = [
+                    "Yes - daily", "Yes - weekly", "Yes - monthly",
+                    "Yes - occasionally", "Yes - rarely"
+                ]
+            elif "time" in parent_lower or "when" in parent_lower:
+                conditionals = [
+                    "Yes - morning", "Yes - afternoon", "Yes - evening",
+                    "Yes - night", "Yes - after meals"
+                ]
+            elif "trigger" in parent_lower or "cause" in parent_lower:
+                conditionals = [
+                    "Yes - after eating", "Yes - during stress",
+                    "Yes - with activity", "Yes - when lying down",
+                    "Yes - with certain foods"
+                ]
+            else:
+                conditionals = [
+                    "Yes - mild", "Yes - moderate", "Yes - severe",
+                    "Yes - occasionally", "Yes - frequently",
+                    "Yes - in the morning", "Yes - at night",
+                    "Yes - after eating", "Yes - with activity"
+                ]
+            
+            suggestions = [c for c in conditionals if c.lower().startswith(query_lower)]
+            return suggestions[:5]
+
+        # For regular questions, get context-specific suggestions
+        question_lower = question.lower()
+        specific_options = get_question_specific_suggestions(question_lower)
+        
+        if specific_options:
+            suggestions = [opt for opt in specific_options if opt.lower().startswith(query_lower)]
+            if suggestions:
+                return suggestions[:5]
+
+        # If no specific suggestions found or none match the query,
+        # use AI for more dynamic suggestions
+        sys_prompt = "You are a medical assistant helping with a GI-related questionnaire."
+        user_prompt = f"""
+Question: {question}
+Previous context: {context_str}
+User input: {query}
+
+Suggest 5 relevant medical answers that:
+1. Start exactly with "{query}"
+2. Are specific to gastrointestinal symptoms and conditions
+3. Are natural completions of the user's input
+4. Are relevant to the specific question being asked
+
+Provide only the suggestions, one per line.
+"""
+        
         res = openai_client.chat.completions.create(
             model=GPT_MODEL,
             messages=[
                 {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            temperature=0.7,
+            temperature=0.3,
             max_tokens=50
         )
         text = res.choices[0].message.content.strip()
-        lines = [x.strip() for x in text.split('\n') if x.strip()]
-        return lines[:5]
+        suggestions = [x.strip() for x in text.split('\n') if x.strip() and x.lower().startswith(query_lower)]
+        return suggestions[:5]
 
     except Exception as e:
         print("Error in ai_autocomplete:", e)
@@ -472,6 +638,7 @@ def autocomplete():
     question = body.get('question', '')
     context_str = body.get('context', '')
     is_conditional = body.get('conditional_question', False)
+    parent_question = body.get('parent_question', '')  # Added for conditional questions
 
     if not query.strip():
         return jsonify(options=[])
@@ -480,7 +647,8 @@ def autocomplete():
         query=query,
         question=question,
         context_str=context_str,
-        is_conditional=is_conditional
+        is_conditional=is_conditional,
+        parent_question=parent_question
     )
     return jsonify(options=suggestions)
 
