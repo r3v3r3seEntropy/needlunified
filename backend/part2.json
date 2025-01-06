@@ -1,0 +1,352 @@
+{
+  "PAST_MEDICAL_HISTORY": {
+    "Respiratory History": [
+      {
+        "question": "Is there any history of Tuberculosis, Asthma, Allergies, Recurrent Respiratory Tract Infection, or Whooping Cough?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain which conditions and provide details:"
+          }
+        ]
+      }
+    ],
+    "Infectious Disease History": [
+      {
+        "question": "Is there any history of Measles or other Exanthematous Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide details of the condition:"
+          }
+        ]
+      }
+    ],
+    "Chronic Conditions": [
+      {
+        "question": "Is there any history of Hypertension, Diabetes Mellitus, Stroke, or Seizures?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify which conditions and provide details:"
+          }
+        ]
+      }
+    ],
+    "Surgical History": [
+      {
+        "question": "Is there any history of previous surgeries?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide details of the surgeries:"
+          }
+        ]
+      }
+    ],
+    "Injury History": [
+      {
+        "question": "Is there any history of major injuries?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide details of the injuries:"
+          }
+        ]
+      }
+    ],
+    "Hospital Admissions": [
+      {
+        "question": "Is there any history of hospital admissions, ICU admissions, or Blood Transfusions?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide details of the admissions/transfusions:"
+          }
+        ]
+      }
+    ],
+    "Pneumonia History": [
+      {
+        "question": "Is there any history of Community or Hospital Acquired Pneumonia?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide details of the pneumonia episodes:"
+          }
+        ]
+      }
+    ]
+  },
+  "PERSONAL_HISTORY": {
+    "Dietary Habits": [
+      {
+        "question": "What is your diet type?",
+        "type": "select",
+        "options": ["Vegetarian", "Non-vegetarian"]
+      },
+      {
+        "question": "How is your appetite?",
+        "type": "select",
+        "options": ["Normal", "Increased", "Reduced"]
+      }
+    ],
+    "Sleep Pattern": [
+      {
+        "question": "How is your sleep pattern?",
+        "type": "select",
+        "options": ["Normal", "Increased", "Decreased"]
+      }
+    ],
+    "Bowel and Bladder Habits": [
+      {
+        "question": "How are your bowel and bladder habits?",
+        "type": "select",
+        "options": ["Normal", "Increased", "Decreased"],
+        "conditionals": [
+          {
+            "condition": ["Increased", "Decreased"],
+            "question": "How many times per day compared to your normal routine?"
+          }
+        ]
+      }
+    ],
+    "Substance Use": [
+      {
+        "question": "Do you smoke?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please provide: Number of packets/day and number of years OR Number of cigars/beedis per day and number of years"
+          }
+        ]
+      },
+      {
+        "question": "Do you consume alcohol?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify brand and quantity (ml/day):"
+          }
+        ]
+      },
+      {
+        "question": "Do you have any other addictions?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify the addiction:"
+          }
+        ]
+      }
+    ],
+    "STD Exposure": [
+      {
+        "question": "Is there any history of exposure to STDs?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify which STD:"
+          }
+        ]
+      }
+    ]
+  },
+  "OCCUPATIONAL_HISTORY": {
+    "Work Details": [
+      {
+        "question": "Where do you work?",
+        "type": "text",
+        "autocomplete": true
+      }
+    ]
+  },
+  "DRUG_HISTORY": {
+    "Current Medications": [
+      {
+        "question": "Do you take any medications?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list your medications:"
+          }
+        ]
+      },
+      {
+        "question": "Do you take any of these: Penicillin Injections, ATT, Anticancer drugs, or ART?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify which ones and for how long:"
+          }
+        ]
+      }
+    ],
+    "Daily Medications": [
+      {
+        "question": "Do you take any medications on a daily basis?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list your daily medications:"
+          }
+        ]
+      }
+    ],
+    "Specific Medications": [
+      {
+        "question": "Do you take any heart medication?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify the heart medication:"
+          }
+        ]
+      },
+      {
+        "question": "Do you take any blood pressure medication?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify the blood pressure medication:"
+          }
+        ]
+      },
+      {
+        "question": "Do you take any diabetic medication?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify the diabetic medication:"
+          }
+        ]
+      }
+    ],
+    "Allergies": [
+      {
+        "question": "Do you have any known drug allergies?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list your drug allergies:"
+          }
+        ]
+      }
+    ]
+  },
+  "GENERAL_PHYSICAL_EXAMINATION": {
+    "Mental Status": [
+      {
+        "question": "Is the patient conscious, oriented, and cooperative?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "N",
+            "question": "Please specify which aspects are affected:"
+          }
+        ]
+      }
+    ],
+    "Physical Build": [
+      {
+        "question": "How is the patient's build?",
+        "type": "select",
+        "options": ["Poorly Built", "Well Built", "Moderately Built", "Obese Built"]
+      },
+      {
+        "question": "How is the patient's nourishment?",
+        "type": "select",
+        "options": ["Poor", "Well", "Moderate", "Over"]
+      }
+    ],
+    "Physical Signs": [
+      {
+        "question": "Is pallor present?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is icterus present?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is cyanosis present?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is clubbing present?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is edema present?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is lymphadenopathy present?",
+        "type": "boolean"
+      }
+    ],
+    "Vitals": [
+      {
+        "question": "What is the pulse rate?",
+        "type": "number",
+        "unit": "BPM"
+      },
+      {
+        "question": "What is the blood pressure?",
+        "type": "number",
+        "unit": "mmHg"
+      },
+      {
+        "question": "What is the respiratory rate?",
+        "type": "number",
+        "unit": "CPM"
+      },
+      {
+        "question": "What is the temperature status?",
+        "type": "select",
+        "options": ["Afebrile", "Febrile"],
+        "conditionals": [
+          {
+            "condition": "Febrile",
+            "question": "Please specify the temperature:"
+          }
+        ]
+      }
+    ],
+    "Cardiovascular": [
+      {
+        "question": "Is the Jugular Venous Pressure raised?",
+        "type": "boolean"
+      }
+    ],
+    "Ophthalmological": [
+      {
+        "question": "Are the pupils dilated?",
+        "type": "boolean"
+      },
+      {
+        "question": "How is the pupillary light reflex?",
+        "type": "select",
+        "options": ["Reactive", "Non-reactive"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1672 @@
+{
+  "FLATULENCE": {
+    "Duration": [
+      {
+        "question": "When Did You First Notice An Increase In Flatulence Or Belching?",
+        "type": "text"
+      },
+      {
+        "question": "Has The Frequency Or Intensity Of Your Flatulence Changed Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      },
+      {
+        "question": "Have There Been Periods Where The Issue Seemed To Resolve, Only To Recur Later?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the recurrence pattern:"
+          }
+        ]
+      }
+    ],
+    "History Of Habit Of Belching": [
+      {
+        "question": "How Often Do You Find Yourself Belching Daily?",
+        "type": "text"
+      },
+      {
+        "question": "Is There A Particular Time Of Day When Flatulence Is More?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the timing:"
+          }
+        ]
+      },
+      {
+        "question": "Do You Notice Belching More After Eating Or Drinking Certain Items?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain which items:"
+          }
+        ]
+      },
+      {
+        "question": "Does Belching Relieve Discomfort?",
+        "type": "boolean"
+      },
+      {
+        "question": "Is It Voluntary and Controllable or Involuntary And Uncontrollable?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Noticed Any Specific Triggers That Increase Belching, Such As Stress Or Certain Body Positions?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the triggers:"
+          }
+        ]
+      }
+    ],
+    "Pain": [
+      {
+        "question": "Do You Experience Any Pain Or Discomfort Associated With Flatulence?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Can You Describe The Type Of Pain (Sharp, Dull, Cramping) And Its Location?"
+          },
+          {
+            "condition": "Y",
+            "question": "Does The Pain Occur Before, During, Or After Episodes Of Flatulence?"
+          },
+          {
+            "condition": "Y",
+            "question": "Is The Pain Localized Or Does It Spread To Other Areas Of Your Abdomen Or Back?"
+          }
+        ]
+      }
+    ],
+    "Presence Of Diarrhea": [
+      {
+        "question": "Have You Experienced Any Episodes Of Diarrhea?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Frequently?"
+          },
+          {
+            "condition": "Y",
+            "question": "Is The Diarrhea Associated With Episodes Of Flatulence?"
+          },
+          {
+            "condition": "Y",
+            "question": "Do You Notice Any Particular Food Or Drink That Triggers Diarrhea?",
+            "conditionals": [
+              {
+                "condition": "Y",
+                "question": "Please explain the triggers:"
+              }
+            ]
+          },
+          {
+            "condition": "Y",
+            "question": "Does The Diarrhea Appear To Be Watery, Or Contain Undigested Food Particles?",
+            "conditionals": [
+              {
+                "condition": "Y",
+                "question": "Please explain the appearance:"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Ingestion Of Certain Type Of Food": [
+      {
+        "question": "Have You Noticed An Increase In Flatulence After Consuming Specific Types Of Food (E.G., Dairy, High-Fiber Foods, Artificial Sweeteners)?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please specify the types of food:"
+          }
+        ]
+      },
+      {
+        "question": "Are There Any Foods That You Have Recently Introduced Into Your Diet That Coincide With The Onset Of Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the new foods:"
+          }
+        ]
+      },
+      {
+        "question": "Do You Follow Any Specific Diet (E.G., Vegan, Ketogenic) That Includes High-Flatulence Foods?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the diet:"
+          }
+        ]
+      },
+      {
+        "question": "How Do Meals Prepared Outside Of Your Home Affect Your Symptoms Compared To Home-Cooked Meals?",
+        "type": "text"
+      }
+    ],
+    "History Of Food Allergy": [
+      {
+        "question": "Do You Have Any Known Food Allergies?",
+        "type": "boolean", 
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the food allergies:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Experienced Any Allergic Reactions Recently?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the reactions:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Ever Undergone Allergy Testing To Identify Potential Food Sensitivities?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the test results:"
+          }
+        ]
+      },
+      {
+        "question": "Does Avoidance Of Known Allergens Reduce Your Symptoms Of Flatulence?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the improvement:"
+          }
+        ]
+      }
+    ],
+    "Intestinal Parasite": [
+      {
+        "question": "Have You Been Diagnosed With Or Treated For An Intestinal Parasite In The Past?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the diagnosis and treatment:"
+          }
+        ]
+      },
+      {
+        "question": "Are There Any Signs Or Symptoms (E.G., Unexplained Weight Loss, Abdominal Pain, Changes In Appetite) That Might Suggest An Intestinal Parasite?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the signs and symptoms:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Traveled Recently To Areas Where Intestinal Parasites Are More Common?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the travel history:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Been In Close Contact With Someone Diagnosed With An Intestinal Parasite?",
+        "type": "boolean"
+      }
+    ],
+    "Lifestyle And Dietary Habits": [
+      {
+        "question": "Can You Describe Your Typical Daily Diet?",
+        "type": "text"
+      },
+      {
+        "question": "Do You Consume Alcohol, Carbonated Beverages, Or Use Chewing Gum Frequently?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the consumption habits:"
+          }
+        ]
+      },
+      {
+        "question": "Have There Been Any Recent Changes To Your Lifestyle Or Diet?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      },
+      {
+        "question": "How Much Physical Activity Do You Engage In?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Noticed Any Impact On Your Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the impact:"
+          }
+        ]
+      }
+    ],
+    "Previous Medical Interventions": [
+      {
+        "question": "Have You Undergone Any Gastrointestinal Surgeries Or Procedures?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the surgeries or procedures:"
+          }
+        ]
+      },
+      {
+        "question": "Are You Currently Taking Any Medications Or Supplements That Might Affect Digestion Or Cause Flatulence?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the medications or supplements:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Previously Sought Medical Treatment For Gastrointestinal Issues?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "What Was The Outcome?"
+          }
+        ]
+      },
+      {
+        "question": "Are There Any Over-The-Counter Remedies Or Supplements You've Tried For Flatulence?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Have Any Been Effective?"
+          }
+        ]
+      }
+    ]
+  }, 
+  "DYSPHAGIA": {
+    "Duration/Onset": [
+      {
+        "question": "When Did You First Start Experiencing Difficulty Swallowing?",
+        "type": "text"
+      },
+      {
+        "question": "Was The Onset Gradual Or Sudden?",
+        "type": "text"
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Have You Noticed Your Swallowing Difficulty Getting Progressively Worse Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Has There Been Any Change In The Nature Of Your Swallowing Difficulty Since It First Started?",
+            "conditionals": [
+              {
+                "condition": "Y",
+                "question": "Please explain the change:"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Relation With Solids And Liquids": [
+      {
+        "question": "Do You Have More Trouble Swallowing Solids, Liquids, Or Both?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Noticed Any Specific Foods Or Drinks That Are Particularly Difficult To Swallow?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain which foods or drinks:"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Are There Any Aggravating Factors?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the aggravating factors:"
+          }
+        ]
+      },
+      {
+        "question": "Does Stress, Position (Lying Down, Standing, Or Sitting), Or Exercise Affect Your Swallowing?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain how these factors affect your swallowing:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Have You Found Any Factors That Help Ease Your Swallowing?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relieving factors:"
+          }
+        ]
+      },
+      {
+        "question": "Does Drinking Water Or Eating Softer Foods Lessen The Difficulty?",
+        "type": "boolean"
+      }
+    ],
+    "Associated Symptoms": [
+      {
+        "question": "Have You Experienced Any Coughing, Choking, Or Regurgitation Of Food?",
+        "type": "boolean"
+      },
+      {
+        "question": "Are There Any Accompanying Symptoms Such As Weight Loss, Chest Pain, Or Heartburn?",
+        "type": "text"
+      }
+    ],
+    "Past Medical History": [
+      {
+        "question": "Do You Have A History Of Gastrointestinal Or Esophageal Disorders?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the disorders:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Undergone Any Surgeries Or Treatments That Could Affect Swallowing?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the surgeries or treatments:"
+          }
+        ]
+      }
+    ],
+    "Medication And Allergies": [
+      {
+        "question": "Are You Currently Taking Any Medications?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the medications:"
+          }
+        ]
+      },
+      {
+        "question": "Do You Have Any Known Allergies, Especially To Foods That Could Contribute To Your Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the allergies:"
+          }
+        ]
+      }
+    ],
+    "Lifestyle Factors": [
+      {
+        "question": "Have You Made Any Recent Changes To Your Diet Or Lifestyle That Coincided With The Onset Of Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      }
+    ]
+  }, 
+  "FEVER": {
+    "Duration": [
+      {
+        "question": "How Many Days Have You Been Experiencing The Fever?",
+        "type": "text"
+      }
+    ],
+    "Onset": [
+      {
+        "question": "Did The Fever Start Suddenly Or Gradually Increase Over Time?",
+        "type": "text"
+      },
+      {
+        "question": "Can You Identify Any Events Or Exposures That Occurred Just Before The Onset Of Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the events or exposures:"
+          }
+        ]
+      }
+    ],
+    "Type": [
+      {
+        "question": "Has The Fever Been Continuous, Or Does It Come And Go?",
+        "type": "text"
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Has The Intensity Of The Fever Changed Since It First Began?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes in intensity:"
+          }
+        ]
+      },
+      {
+        "question": "Do You Experience Fever At Specific Times Of The Day Or Night?",
+        "type": "text"
+      }
+    ],
+    "Episodes": [
+      {
+        "question": "How Often Do You Experience Fever Spikes?",
+        "type": "text"
+      },
+      {
+        "question": "Is There A Pattern To These Episodes, Such As Occurring After Certain Activities Or At Specific Times?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the pattern:"
+          }
+        ]
+      }
+    ],
+    "Grades": [
+      {
+        "question": "What Has Been The Highest Temperature Recorded During This Fever?",
+        "type": "text"
+      }
+    ],
+    "Associated With Chills And Rigors": [
+      {
+        "question": "Do You Experience Chills Or Shaking Rigors With The Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How long do the chills or rigors last?"
+          }
+        ]
+      }
+    ],
+    "Associated With Night Sweats": [
+      {
+        "question": "Have You Experienced Excessive Sweating During The Night?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Do These Night Sweats Occur Even When The Fever Seems To Subside?"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Have You Noticed Any Factors That Seem To Worsen The Fever Or Related Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the aggravating factors:"
+          }
+        ]
+      },
+      {
+        "question": "Does Physical Exertion, Stress, Or Exposure To Certain Environments Affect Your Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain how these factors affect your fever:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Does Medication, Rest, Or Other Treatments Seem To Have Helped Reduce Your Fever Or Make You Feel Better?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relieving factors:"
+          }
+        ]
+      }
+    ],
+    "Dietary And Lifestyle Factors": [
+      {
+        "question": "Have There Been Any Changes To Your Lifestyle That Coincided With The Onset Of Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the lifestyle changes:"
+          }
+        ]
+      },
+      {
+        "question": "Are You Consuming Enough Fluids And Maintaining A Balanced Diet During This Period?",
+        "type": "boolean"
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Have You Had Any Recent Infections, Surgeries, Or Vaccinations?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the recent medical events:"
+          }
+        ]
+      }
+    ],
+    "Exposure History": [
+      {
+        "question": "Have You Been In Close Contact With Anyone Who Is Ill Or Has Had A Fever?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the exposure:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Recently Traveled To Areas With Known Health Risks Or Outbreaks?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the travel history:"
+          }
+        ]
+      }
+    ]
+  },
+  "MELENA": {
+    "Duration": [
+      {
+        "question": "How Long Have You Been Noticing Black, Tarry Stools?",
+        "type": "text"
+      },
+      {
+        "question": "Has There Been Any Change In The Frequency Or Any Other Change In The Appearance Of The Stools Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      }
+    ],
+    "Onset": [
+      {
+        "question": "Was The Onset Sudden, Or Did You Notice A Gradual Change In The Color And Consistency Of Your Stools?",
+        "type": "text"
+      },
+      {
+        "question": "Can You Recall Any Specific Event Or Condition That Occurred Around The Time You First Noticed The Black, Tarry Stools?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the event or condition:"
+          }
+        ]
+      }
+    ],
+    "Episodes": [
+      {
+        "question": "How Many Times Have You Experienced Passing Black, Tarry Stools?",
+        "type": "text"
+      },
+      {
+        "question": "Is There A Particular Time Of Day When These Episodes Are More Likely To Occur?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the timing:"
+          }
+        ]
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Have The Characteristics Of The Stool (Color, Consistency) Worsened Or Changed Since You First Noticed?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Experienced Periods Where The Stool Color Returned To Normal, Only To Become Black And Tarry Again?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the fluctuations:"
+          }
+        ]
+      }
+    ],
+    "Associated With Straining": [
+      {
+        "question": "Do You Need To Strain Excessively To Pass These Black, Tarry Stools?",
+        "type": "boolean"
+      },
+      {
+        "question": "Does The Act Of Straining Seem To Affect The Appearance Or Consistency Of The Stool?",
+        "type": "boolean"
+      }
+    ],
+    "Sticking To Pan": [
+      {
+        "question": "Have You Noticed If The Black, Tarry Stools Sticking To The Toilet Pan More Than Usual?",
+        "type": "boolean"
+      },
+      {
+        "question": "Does The Stool Leave A Residue That Is Difficult To Flush Away?",
+        "type": "boolean"
+      }
+    ],
+    "Associated Symptoms": [
+      {
+        "question": "Besides The Change In Stool Color, Have You Experienced Any Other Symptoms Such As Abdominal Pain, Nausea, Or Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the associated symptoms:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Noticed Any Signs Of Blood Elsewhere, Such As In Vomit Or Sputum?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain where else you have noticed blood:"
+          }
+        ]
+      }
+    ],
+    "Dietary And Medication History": [
+      {
+        "question": "Have There Been Any Recent Changes To Your Diet That Might Contribute To The Appearance Of Your Stools?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the dietary changes:"
+          }
+        ]
+      },
+      {
+        "question": "Are You Currently Taking Any Medications?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the medications:"
+          }
+        ]
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Do You Have A History Of Gastrointestinal Disorders, Such As Ulcers, Gastritis, Or Inflammatory Bowel Disease?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the gastrointestinal disorders:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Had Any Recent Medical Procedures Or Surgeries That Could Affect Your Gastrointestinal Tract?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the procedures or surgeries:"
+          }
+        ]
+      }
+    ],
+    "Lifestyle Factors": [
+      {
+        "question": "Do You Consume Alcohol Or Smoke?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How frequently do you consume alcohol or smoke?"
+          }
+        ]
+      },
+      {
+        "question": "Have You Engaged In Any Recent Activities Or Behaviors That Could Increase Your Risk Of Gastrointestinal Bleeding?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the activities or behaviors:"
+          }
+        ]
+      }
+    ]
+  },
+  "HEMATEMESIS": {
+    "Duration": [
+      {
+        "question": "When Did You First Experience Vomiting Blood?",
+        "type": "text"
+      },
+      {
+        "question": "Has The Frequency Of Vomiting Blood Episodes Changed Since The First Occurrence?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Onset": [
+      {
+        "question": "Was The Onset Of Vomiting Blood Sudden Or Gradual?",
+        "type": "text"
+      },
+      {
+        "question": "Can You Recall Any Specific Event Or Condition That Occurred Around The Time You First Experienced Hematemesis?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the event or condition:"
+          }
+        ]
+      }
+    ],
+    "Episodes": [
+      {
+        "question": "How Many Times Have You Vomited Blood?",
+        "type": "text"
+      },
+      {
+        "question": "Are There Certain Times Of Day When These Episodes Are More Likely To Occur?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the timing:"
+          }
+        ]
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Has There Been An Increase In The Volume Of Blood Or Frequency Of Episodes Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the progression:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Noticed Any Changes In Your Overall Health Since The Onset Of Hematemesis?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      }
+    ],
+    "Timing": [
+      {
+        "question": "Do Episodes Of Vomiting Blood Occur In Relation To Meals?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relationship:"
+          }
+        ]
+      },
+      {
+        "question": "Is There Any Pattern Or Trigger You Have Noticed That Precedes An Episode?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the pattern or trigger:"
+          }
+        ]
+      }
+    ],
+    "Color": [
+      {
+        "question": "What Color Is The Vomited Blood (Bright Red, Dark, Coffee-Ground Appearance)?",
+        "type": "text"
+      },
+      {
+        "question": "Does The Color Of The Vomited Blood Change With Different Episodes?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the color changes:"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Have You Identified Any Activities, Foods, Or Other Factors That Seem To Trigger Or Worsen The Episodes Of Vomiting Blood?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the aggravating factors:"
+          }
+        ]
+      },
+      {
+        "question": "Does Consumption Of Alcohol, Certain Medications, Or Stress Exacerbate Your Condition?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the exacerbating factors:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Are There Any Measures Or Treatments That Have Helped Reduce The Frequency Or Severity Of The Hematemesis?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relieving measures:"
+          }
+        ]
+      },
+      {
+        "question": "Does Rest, Avoiding Certain Foods Or Medications, Or Any Specific Actions Alleviate Your Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the alleviating factors:"
+          }
+        ]
+      }
+    ],
+    "Associated Symptoms": [
+      {
+        "question": "Besides Vomiting Blood, Have You Experienced Any Other Symptoms Like Abdominal Pain, Dizziness, Or Changes In Stool Appearance?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the associated symptoms:"
+          },
+          {
+            "condition": "Y",
+            "question": "Do These Symptoms Relate In Timing To The Episodes Of Hematemesis?"
+          }
+        ]
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Do You Have A History Of Gastrointestinal Diseases, Such As Ulcers Or Gastritis, That Might Contribute To Hematemesis?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the gastrointestinal diseases:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Experienced Any Recent Injuries Or Surgeries?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the injuries or surgeries:"
+          }
+        ]
+      }
+    ]
+  },
+  "JAUNDICE": {
+    "Duration": [
+      {
+        "question": "How Long Have You Noticed The Yellowing Of Your Skin And Eyes?",
+        "type": "text"
+      },
+      {
+        "question": "Has The Intensity Of The Yellow Color Changed Since You First Noticed It?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Onset": [
+      {
+        "question": "Did The Yellowing Of Your Skin And Eyes Appear Suddenly Or Gradually?",
+        "type": "text"
+      },
+      {
+        "question": "Can You Identify Any Events Or Conditions That Started Around The Same Time As The Jaundice?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the events or conditions:"
+          }
+        ]
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Have You Noticed Any Spread Or Intensification Of The Yellow Color Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the progression:"
+          }
+        ]
+      },
+      {
+        "question": "Apart From The Yellowing, Have There Been Any Other Changes In Your Health Since The Onset Of Jaundice?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Are There Specific Factors Or Activities That Seem To Worsen The Jaundice Or Related Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the aggravating factors:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Experienced Any Increase In Symptoms After Eating Certain Foods, Taking Medications, Or Engaging In Physical Activities?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the triggering factors:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Have You Found Any Measures Or Treatments That Alleviate The Symptoms Of Jaundice, Even Temporarily?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relieving measures:"
+          }
+        ]
+      },
+      {
+        "question": "Does Rest, Dietary Changes, Or Medication Adjustments Seem To Affect The Severity Of Your Jaundice?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the effects:"
+          }
+        ]
+      }
+    ],
+    "Associated Symptoms": [
+      {
+        "question": "Besides The Yellowing Of Your Skin And Eyes, Have You Experienced Any Other Symptoms Like Abdominal Pain, Itching, Or Changes In Urine And Stool Color?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the associated symptoms:"
+          },
+          {
+            "condition": "Y",
+            "question": "Are These Symptoms Constant Or Do They Fluctuate In Intensity?"
+          }
+        ]
+      }
+    ],
+    "Lifestyle And Dietary Habits": [
+      {
+        "question": "Can You Describe Your Alcohol Consumption Habits And Any Recent Changes To Your Diet?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain your alcohol consumption and dietary changes:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Been Exposed To Any Substances Or Environments That Could Affect Liver Function?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the exposures:"
+          }
+        ]
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Do You Have A History Of Liver Disease, Gallstones, Or Other Related Medical Conditions?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the medical conditions:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Had Any Recent Illnesses Or Infections That Might Contribute To Jaundice?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the recent illnesses or infections:"
+          }
+        ]
+      }
+    ],
+    "Medication And Substance Use": [
+      {
+        "question": "Are You Currently Taking Any Medications, Supplements, Or Herbal Remedies That Could Impact Your Liver?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the medications, supplements, or herbal remedies:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Used Any Recreational Drugs Or Been Exposed To Toxins That Could Affect Liver Health?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the drug use or toxin exposure:"
+          }
+        ]
+      }
+    ]
+  },
+  "VOMITING": {
+    "Duration/Onset": [
+      {
+        "question": "When Did The Vomiting First Begin?",
+        "type": "text"
+      },
+      {
+        "question": "Was There Any Event Or Symptom That Preceded The Onset Of Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the event or symptom:"
+          }
+        ]
+      }
+    ],
+    "Episodes": [
+      {
+        "question": "How Many Episodes Of Vomiting Have You Had In The Last 24 Hours?",
+        "type": "text"
+      },
+      {
+        "question": "Is There A Specific Time Of Day When Episodes Are More Likely To Occur?",
+        "type": "text"
+      }
+    ],
+    "Color": [
+      {
+        "question": "What Color Has The Vomit Been?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Noticed Any Changes In The Color Of The Vomit Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Bilious Or Not": [
+      {
+        "question": "Does The Vomit Appear Green Or Yellow, Indicating The Presence Of Bile?",
+        "type": "boolean"
+      },
+      {
+        "question": "Have There Been Episodes Without This Coloration?",
+        "type": "boolean"
+      }
+    ],
+    "Blood Stained": [
+      {
+        "question": "Have You Noticed Any Red Streaks Or Coffee-Ground Appearance In The Vomit?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Often Has This Occurred?"
+          }
+        ]
+      }
+    ],
+    "Food Particles": [
+      {
+        "question": "Are There Identifiable Food Particles In The Vomit?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Does The Presence Of Food Particles Relate To The Timing Of Meals?"
+          }
+        ]
+      }
+    ],
+    "Foul Smelling": [
+      {
+        "question": "Does The Vomit Have A Particularly Bad Or Unusual Odor?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Does This Smell Compare To Previous Vomiting Episodes If Any?"
+          }
+        ]
+      }
+    ],
+    "Progress": [
+      {
+        "question": "How Has The Pattern Of Vomiting Changed Since It First Began?",
+        "type": "text"
+      },
+      {
+        "question": "Have The Frequency And Severity Of Vomiting Episodes Increased Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Associated With Nausea": [
+      {
+        "question": "Do Episodes Of Vomiting Come With Feelings Of Nausea?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Long Does The Nausea Last Before Vomiting Occurs?"
+          }
+        ]
+      }
+    ],
+    "Projectile": [
+      {
+        "question": "Have Any Of The Vomiting Episodes Been Forceful Or Projectile?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Under What Circumstances Do These Episodes Typically Occur?"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Have You Identified Any Specific Foods, Activities, Or Other Factors That Seem To Trigger Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the triggering factors:"
+          }
+        ]
+      },
+      {
+        "question": "Does Movement Or Lying In Certain Positions Influence The Onset Of Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the influence:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Are There Any Measures That Have Helped Reduce The Frequency Or Severity Of The Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the measures:"
+          }
+        ]
+      },
+      {
+        "question": "Does Resting Or Avoiding Certain Foods Or Activities Provide Relief?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relief:"
+          }
+        ]
+      }
+    ],
+    "Additional Symptoms": [
+      {
+        "question": "Have You Experienced Any Other Symptoms, Such As Abdominal Pain, Fever, Or Diarrhea, Along With Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the additional symptoms:"
+          },
+          {
+            "condition": "Y",
+            "question": "Are These Symptoms Persistent Or Intermittent, And How Do They Correlate With The Vomiting Episodes?"
+          }
+        ]
+      }
+    ],
+    "Dietary And Medication History": [
+      {
+        "question": "Have There Been Any Recent Changes To Your Diet Or New Medications That Might Be Associated With The Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the changes:"
+          }
+        ]
+      },
+      {
+        "question": "Are You Currently Taking Any Medications That Could Potentially Cause Nausea Or Vomiting As Side Effects?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please list the medications:"
+          }
+        ]
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Do You Have A History Of Gastrointestinal Or Other Medical Conditions That Might Be Related To Vomiting?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the conditions:"
+          }
+        ]
+      },
+      {
+        "question": "Have You Had Any Recent Illnesses, Surgeries, Or Hospitalizations?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the recent events:"
+          }
+        ]
+      }
+    ]
+  }, 
+  "DIARRHEA": {
+    "Duration": [
+      {
+        "question": "How Long Have You Been Experiencing Diarrhea?",
+        "type": "text"
+      }
+    ],
+    "Onset": [
+      {
+        "question": "When Did Diarrhea First Start?",
+        "type": "text"
+      },
+      {
+        "question": "Was Its Onset Associated With Any Specific Event, Such As Travel Or Eating A Particular Food?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the event:"
+          }
+        ]
+      },
+      {
+        "question": "Was the onset sudden or insidious?",
+        "type": "text"
+      }
+    ],
+    "Progress": [
+      {
+        "question": "Have The Symptoms Become More Frequent Or Severe Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Timing": [
+      {
+        "question": "Does Diarrhea Occur After Eating?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Have You Noticed Any Patterns In Timing Related To Your Symptoms?"
+          }
+        ]
+      }
+    ],
+    "Episodes": [
+      {
+        "question": "How Many Times A Day Are You Passing Stools?",
+        "type": "text"
+      }
+    ],
+    "Color": [
+      {
+        "question": "What Color Is Your Stool?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Noticed Any Changes In Color Since The Diarrhea Started?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Blood Stained": [
+      {
+        "question": "Have You Noticed Any Red Blood Mixed With Your Stool?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Is The Blood Bright Red, Or Does It Appear Darker?"
+          }
+        ]
+      }
+    ],
+    "Mucous Stained": [
+      {
+        "question": "Do You See Any Mucus In Your Stool?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Frequently Do You Notice Mucus?"
+          }
+        ]
+      }
+    ],
+    "Watery Or Semisolid": [
+      {
+        "question": "Are Your Stools Watery, Or Do They Have Some Solid Form?",
+        "type": "text"
+      },
+      {
+        "question": "Has The Consistency Changed Over Time?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the change:"
+          }
+        ]
+      }
+    ],
+    "Tenesmus": [
+      {
+        "question": "Do You Feel An Urgent Need To Have A Bowel Movement But Then Pass Little To No Stool?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "How Often Do You Experience This Sensation?"
+          }
+        ]
+      }
+    ],
+    "Foul Smelling": [
+      {
+        "question": "Does Your Stool Have A Strong Or Unusual Odor?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Has There Been Any Change In The Smell Since The Onset Of Diarrhea?",
+            "conditionals": [
+              {
+                "condition": "Y",
+                "question": "Please explain the change:"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Associated With Pain": [
+      {
+        "question": "Do You Experience Abdominal Pain Or Cramping With Your Diarrhea?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Can You Describe The Pain (E.G., Location, Intensity, Duration)?"
+          }
+        ]
+      }
+    ],
+    "Aggravating Factors": [
+      {
+        "question": "Have Certain Foods, Stress, Or Physical Activities Worsened Your Diarrhea?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the aggravating factors:"
+          }
+        ]
+      }
+    ],
+    "Relieving Factors": [
+      {
+        "question": "Have You Found Any Dietary Changes, Medications, Or Activities That Ease Your Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the relieving factors:"
+          }
+        ]
+      }
+    ],
+    "Dietary History": [
+      {
+        "question": "Can You Describe Your Diet In The Days Before The Onset Of Diarrhea?",
+        "type": "text"
+      },
+      {
+        "question": "Have You Recently Introduced New Foods Into Your Diet?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the new foods:"
+          }
+        ]
+      }
+    ],
+    "Medical History": [
+      {
+        "question": "Do You Have Any Pre-Existing Medical Conditions That Could Be Related To Your Symptoms?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the medical conditions:"
+          }
+        ]
+      }
+    ],
+    "Medications": [
+      {
+        "question": "Have You Recently Used Antibiotics, Or Are You On Any Long-Term Medications?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Please explain the medications:"
+          }
+        ]
+      }
+    ],
+    "Travel History": [
+      {
+        "question": "Have You Traveled Recently, Especially To Areas With Known Health Risks?",
+        "type": "boolean",
+        "conditionals": [
+          {
+            "condition": "Y",
+            "question": "Was The Onset Of Diarrhea Associated With Your Travel?"
+          }
+        ]
+      }
+    ]
+  }
+}
